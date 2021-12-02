@@ -1,4 +1,5 @@
 public class CreditCalculator {
+
     private int amount;
     private int years;
     private int percent;
@@ -8,13 +9,13 @@ public class CreditCalculator {
         this.years = years;
         this.percent = percent;
     }
-    public double paymentForMonth {
-
+    public double paymentForMonth() {
+        return  ((amount / 100 * percent * years) + (amount)) / (years * 12);
     }
-    public double overPayment {
-
+    public double overPayment() {
+        return  amount / 100 * percent * years;
     }
-    public double totalAmount {
-
+    public double totalAmount() {
+        return  (amount / 100 * percent * years)+amount;
     }
 }
